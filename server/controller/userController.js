@@ -99,7 +99,8 @@ export const addNewAdmin = catchAsyncErrors(async (req, res, next) => {
   });
   res.status(200).json({
     success: true,
-    message: "New Admin Registered"
+    message: "New Admin Registered",
+    admin,
   });
 });
 
@@ -215,8 +216,8 @@ export const logoutPatient = catchAsyncErrors(async (req, res, next) => {
     .cookie("patientToken", "", {
       httpOnly: true,
       expires: new Date(Date.now()),
-      secure: true,
       sameSite: 'None',
+      secure: true,
     })
     .json({
       success: true,
