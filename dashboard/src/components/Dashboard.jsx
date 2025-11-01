@@ -16,10 +16,10 @@ const Dashboard = () => {
     const fetchDashboardData = async () => {
       try {
         const [appointmentsRes, doctorsRes] = await Promise.all([
-          axios.get("http://localhost:4000/api/v1/appointment/getall", {
+          axios.get("https://helpinhealth.onrender.com/api/v1/appointment/getall", {
             withCredentials: true,
           }),
-          axios.get("http://localhost:4000/api/v1/user/doctors", {
+          axios.get("https://helpinhealth.onrender.com/api/v1/user/doctors", {
             withCredentials: true,
           }),
         ]);
@@ -43,7 +43,7 @@ const Dashboard = () => {
   const handleUpdateStatus = async (appointmentId, status) => {
     try {
       const { data } = await axios.put(
-        `http://localhost:4000/api/v1/appointment/update/${appointmentId}`,
+        `https://helpinhealth.onrender.com/api/v1/appointment/update/${appointmentId}`,
         { status },
         { withCredentials: true }
       );
