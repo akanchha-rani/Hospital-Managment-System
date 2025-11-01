@@ -9,7 +9,7 @@ import messageRouter from "./router/messageRouter.js";
 import userRouter from "./router/userRouter.js";
 import appointmentRouter from "./router/appointmentRouter.js";
 
-config({ path: "./config/config.env" });
+config({ path: "./config.env" });
 
 const app = express();
 
