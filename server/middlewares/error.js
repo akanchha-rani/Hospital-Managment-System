@@ -14,7 +14,7 @@ class ErrorHandler extends Error {
         err = new ErrorHandler(message, 400);
     }
     if (err.name === "JsonWebTokenError") {
-      const message = `Token is invalid, Try again!`;
+      const message = `Json Web Token is invalid, Try again!`;
       err = new ErrorHandler(message, 400);
     }
     if (err.name === "TokenExpiredError") {
